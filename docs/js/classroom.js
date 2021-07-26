@@ -12,7 +12,6 @@ function getCourses() {
 
 function createCourses(response) {
   const courses = response.result.courses;
-  var classes = [null, null, null, null, null, null, null, null];
   
   for (let i = 0; i < courses.length; i++) {
     if (courses[i].section !== undefined) {
@@ -25,11 +24,7 @@ function createCourses(response) {
       }
     } 
   }
-
-  // for (const i of classes) {
-  //   console.log(i);    
-  // }
-
+  return createCalendar();
 }
 
 
