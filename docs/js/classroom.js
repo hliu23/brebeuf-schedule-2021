@@ -42,7 +42,7 @@ function createCourses(response) {
     });
 
   }
-  return createCalendar();
+  return checkExistingCalendar();
 }
 
 
