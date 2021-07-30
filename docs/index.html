@@ -2,7 +2,8 @@
 <html lang="en-US">
 	<head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Brebeuf Schedule</title>
+<!--<script defer src="./js/form.js"></script>-->
     <script defer src="https://apis.google.com/js/api.js"></script>
 		<script defer src="./js/handle-api.js"></script>
     <script defer src="./data/data.js"></script>
@@ -14,8 +15,11 @@
 		<button id="authorize-button" style="display: none;">Authorize</button>
 		<button id="signout-button" style="display: none;">Sign Out</button>
 		
-		<!--jquery
-		<script defer src="./js/jquery-3.6.0.min.js"></script>-->
+    <button id="execute" onclick="getCourses()">Create Events in Calendar</button>
 
+    <!--<form id="classes-form">
+      <div id="user-input"></div>
+      <input type="submit" value="Submit">
+    </form>-->
 	</body>
 </html>

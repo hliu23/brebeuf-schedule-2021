@@ -38,7 +38,7 @@ function updateSigninStatus(isSignedIn) {
     authorizeButton.style.display = "none";
     signoutButton.style.display = "block";
 
-    return getCourses();
+    // return getCourses();
 
   } else {
     authorizeButton.style.display = "block";
