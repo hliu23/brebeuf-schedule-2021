@@ -1,40 +1,39 @@
-function createCalendar() {
-  var localStorage = window.localStorage;
-  var calendarId = localStorage.getItem("brebeufScheduleCalendar");
+function checkExistingCalendar() {
+  var calendarId = window.localStorage.getItem("brebeufScheduleCalendar");
+  window.localStorage.setItem("brebeufScheduleCalendar", null);
 
   if (calendarId !== null) {
-    var del = gapi.client.calendar.calendars.delete({
+    gapi.client.calendar.calendars.delete({
       "calendarId": calendarId
     }).then(function (response) {
-      calendarId = null;
-      localStorage.removeItem("brebeufScheduleCalendar");
-
-    }).catch(function (reason){
-      console.log(reason);
-      calendarId = null;
-      localStorage.removeItem("brebeufScheduleCalendar");
-    })
-  }
-
-  // calendar color and alert
-  if (calendarId === null) {
-    var calendar = gapi.client.calendar.calendars.insert({
-      "resource": {
-        "summary": "Brebeuf Schedule",
-        "description": "Generated on " + new Date().toLocaleString(),
-        "timeZone": "America/Indiana/Indianapolis"
-      }
-    }).then(function (response) {
-      calendarId = response.result.id;
-      localStorage.setItem("brebeufScheduleCalendar", calendarId);
-      return batchEvents(calendarId);
-      
+      console.log("calendar deleted, id: " + calendarId);
+      createCalendar();
     }).catch(function (reason) {
       console.log(reason);
-      localStorage.removeItem("brebeufScheduleCalendar");
-    });
+      createCalendar();
+    })
+  } else {
+    createCalendar();
   }
-  
+  // calendar color and alert  
+}
+
+function createCalendar() {
+  gapi.client.calendar.calendars.insert({
+    "resource": {
+      "summary": "Brebeuf Schedule",
+      "description": "Generated on " + new Date().toLocaleString(),
+      "timeZone": "America/Indiana/Indianapolis"
+    }
+  }).then(function (response) {
+    calendarId = response.result.id;
+    console.log("calendar created, id: " + calendarId);
+    window.localStorage.setItem("brebeufScheduleCalendar", calendarId);
+    batchEvents(calendarId);
+
+  }).catch(function (reason) {
+    console.log(reason);
+  });
 }
 
 

@@ -12,6 +12,8 @@ const SCOPES = "https://www.googleapis.com/auth/classroom.courses.readonly https
 
 var authorizeButton = document.getElementById("authorize-button");
 var signoutButton = document.getElementById("signout-button");
+var executeButton = document.getElementById("execute-button");
+
 
 
 function start() {
@@ -37,12 +39,12 @@ function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
     authorizeButton.style.display = "none";
     signoutButton.style.display = "block";
-
-    // return getCourses();
+    executeButton.style.display = "block";
 
   } else {
     authorizeButton.style.display = "block";
     signoutButton.style.display = "none";
+    executeButton.style.display = "none";
   }
 }
 
