@@ -12,3 +12,6 @@
 //   <input type=\"number\" id=\"${i}-day\" min=\"1\" max=\"8\" style=\"display: none;\"><br>`
 //   input.insertAdjacentHTML("beforeend", element);
 // }
+
+// having to reload and then press button?
+// empty calendar?
