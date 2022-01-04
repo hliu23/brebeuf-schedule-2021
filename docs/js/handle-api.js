@@ -1,12 +1,12 @@
 gapi.load("client:auth2", start);
 
 // need to hide as secret in github repo (restricted keys)
-const API_KEY = "AIzaSyD2M0TLLkXlK7TKFAG0dI7MgwhIJ4158Xk";
+const API_KEY = "AIzaSyD8lQGXDe3ayR4t4yqCUrIsnVLjD9IhY30";
 
 // need to be web application with origin url added
 // need to setup localhost
 // enable apis, setup request screen
-const CLIENT_ID = "22227420304-65mol9e9a34j1c0an8vc1l0mab6m91sr.apps.googleusercontent.com";
+const CLIENT_ID = "740760182006-9v4fsvhk222ts9lvlsbpqaq4aovcpcej.apps.googleusercontent.com";
 const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/classroom/v1/rest", "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
 const SCOPES = "https://www.googleapis.com/auth/classroom.courses.readonly https://www.googleapis.com/auth/calendar";
 
