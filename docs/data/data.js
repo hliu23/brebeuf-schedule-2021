@@ -58,3 +58,9 @@ const aliasFormat = /d:LS_\d\d\d\d.+(?<period>[A-Z])(?=(?<semester>ALL|S 1|S 2)2
 const sectionFormat = /Period\s(?<period>[A-H]), Lunch\s(?<lunch>[1-3])\s\(Section\s\d\)/;
 
 const classes = [null, null, null, null, null, null, null, null];
+
+function JSONFormat(arr) {
+  for (var x of arr) {
+    console.log(JSON.stringify(x));
+  }
+}
