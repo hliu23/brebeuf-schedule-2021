@@ -10,6 +10,7 @@ const specialDates = {
     new Date(2021, 9-1, 16),
     new Date(2021, 10-1, 13),
     new Date(2022, 1-1, 17),
+    new Date(2022, 3-1, 14),
     new Date(2022, 4-1, 15),
     new Date(2022, 4-1, 18)
   ],

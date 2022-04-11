@@ -9,18 +9,21 @@
     <script defer src="./data/data.js"></script>
 		<script defer src="./js/classroom.js"></script>
 		<script defer src="./js/calendar.js"></script>
+
+		<link href="styles/custom.compressed.css" rel="stylesheet">
 	</head>
 	<body>
 		<!--style in css-->
 		<h1>Brebeuf Schedule</h1>
-		<button id="authorize-button" style="display: none;">Authorize</button>
+		<button id="authorize-button" style="display: none;" class="btn btn-primary">Authorize</button>
 		<button id="signout-button" style="display: none;">Sign Out</button>
 		
-    <button id="execute-button" onclick="getCourses()" style="display: none;">Create Events in Calendar</button>
+    <button id="execute-button" onclick="getCourses()" style="display: none;" class="btn btn-primary">Create Events in Calendar</button>
 		<button id="test-button" onclick="JSONFormat(specialDates.singleDays)"></button>
     <!--<form id="classes-form">
       <div id="user-input"></div>
       <input type="submit" value="Submit">
     </form>-->
+		<button class="btn btn-primary">Schedule</button>
 	</body>
 </html>
