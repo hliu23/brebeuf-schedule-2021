@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="en-US">
-	<head>
-    <meta charset="utf-8">
-    <title>Brebeuf Schedule</title>
-<!--<script defer src="./js/form.js"></script>-->
-    <script defer src="https://apis.google.com/js/api.js"></script>
-		<script defer src="./js/handle-api.js"></script>
-    <script defer src="./data/data.js"></script>
-		<script defer src="./js/classroom.js"></script>
-		<script defer src="./js/calendar.js"></script>
 
-		<link href="styles/custom.compressed.css" rel="stylesheet">
-	</head>
-	<body>
-		<!--style in css-->
-		<h1>Brebeuf Schedule</h1>
-		<button id="authorize-button" style="display: none;" class="btn btn-primary">Authorize</button>
-		<button id="signout-button" style="display: none;">Sign Out</button>
+<head>
+	<meta charset="utf-8">
+	<title>Brebeuf Schedule</title>
+	<!--<script defer src="./js/form.js"></script>-->
+	<script defer src="https://apis.google.com/js/api.js"></script>
+	<script defer src="./js/handle-api.js"></script>
+	<script defer src="./data/data.js"></script>
+	<script defer src="./js/classroom.js"></script>
+	<script defer src="./js/calendar.js"></script>
+
+	<link href="styles/custom.css" rel="stylesheet">
+	<link href="styles/custom.bootstrap.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Source+Serif+Pro&display=swap"	rel="stylesheet">
+	
 		
-    <button id="execute-button" onclick="getCourses()" style="display: none;" class="btn btn-primary">Create Events in Calendar</button>
-		<button id="test-button" onclick="JSONFormat(specialDates.singleDays)"></button>
-    <!--<form id="classes-form">
-      <div id="user-input"></div>
-      <input type="submit" value="Submit">
-    </form>-->
-		<button class="btn btn-primary">Schedule</button>
-	</body>
+</head>
+
+<body>
+	<div class="container-fluid">
+		
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div class="mx-auto">
+					<h1>Brebeuf Schedule</h1>
+				</div>
+				<button id="authorize-button" style="display: none;" class="btn btn-primary">Authorize</button>
+				<button id="signout-button" style="display: none;">Sign Out</button>
+
+				<button id="execute-button" onclick="getCourses()" style="display: none;" class="btn btn-primary">Create Events
+					in
+					Calendar</button>
+				<button class="btn btn-primary">Schedule</button>
+			</div>
+
+			<div class="col-md-2"></div>
+		</div>
+
+
+	</div>
+
+</body>
+
 </html>
